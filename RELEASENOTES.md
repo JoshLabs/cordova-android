@@ -20,6 +20,10 @@
 -->
 ## Release Notes for Cordova (Android) ##
 
+### 6.4.1 (Dec 06, 2017)
+* Fixed smaller version code issue introduced in 5.2.0 [CB-8976](https://issues.apache.org/jira/browse/CB-8976) 
+
+
 ### 6.4.0 (Nov 06, 2017)
 * [CB-13289](https://issues.apache.org/jira/browse/CB-13289) Fixing build problems with Studio Three, but keeping **Windows** Gradle fix for now, will be deprecated
 * [CB-13289](https://issues.apache.org/jira/browse/CB-13289) Fix test to work with new Google **Android** Gradle DSL
