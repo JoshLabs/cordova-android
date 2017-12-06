@@ -154,6 +154,10 @@ task cdvPrintProps << {
 }
 
 android {
+
+    // Added for https://developer.android.com/studio/build/gradle-plugin-3-0-0-migration.html?utm_source=android-studio#variant_aware
+    flavorDimensions "default"
+
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -168,7 +172,7 @@ android {
     }
 
     defaultConfig {
-        versionCode cdvVersionCode ?: new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode"))
+        versionCode cdvVersionCode ?: new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode")) * 10
         applicationId privateHelpers.extractStringFromManifest("package")
 
         if (cdvMinSdkVersion != null) {
